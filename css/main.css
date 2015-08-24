@@ -9,8 +9,45 @@ html {
   box-sizing: inherit;
   }
 
-  body {
-  	background-color: blue;
-  	height: 200px;
-  	width: 200px;
+  * {
+    outline: 1px solid red;
   }
+
+  .app-body {
+    max-width: 55em;
+    margin: auto;
+    margin-top: 10em;
+  }
+
+.question-number,
+.incorrect-correct {
+  display: flex;
+}
+
+.question-number {
+  float: left;
+}
+
+.incorrect-correct {
+  float: right;
+}
+
+.quiz-question {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 7em;
+}
+
+.answer li {
+  display: inline;
+}
+
+.answer {
+   width: 50%;
+   margin: 0 auto;
+}
+
+.submit-button {
+  width: 25%;
+  margin: 0 auto;
+}
