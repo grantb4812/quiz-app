@@ -1,5 +1,6 @@
 $(document).ready(function(){
-	console.log(questions[4].answers[0]);	
+	$('.number').append(questions[0].number);
+	$('.quiz-question').append(questions[0].question);
 
 });
 

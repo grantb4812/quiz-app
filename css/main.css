@@ -80,6 +80,7 @@ html {
 
 .answer ul {
   margin-top: 5em;
+  margin-left: 5em;
 }
 
 .answer li {
@@ -87,8 +88,12 @@ html {
   padding-right: 1em;
 }
 
+.answer span {
+  padding-right: 1em;
+}
+
 .answer {
-   width: 50%;
+   width: 75%;
    margin: 0 auto;
 }
 
