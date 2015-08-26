@@ -9,15 +9,26 @@ html {
   box-sizing: inherit;
   }
 
-  * {
-    outline: 1px solid red;
-  }
+
 
   .app-body {
     max-width: 55em;
     margin: auto;
-    margin-top: 10em;
+    margin-top: 5em;
   }
+
+.app-title {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.app-title h1 {
+  text-align: center;
+}
+
+.quiz-info {
+  margin-top: 3em;
+}
 
 .question-number,
 .incorrect-correct {
@@ -26,10 +37,39 @@ html {
 
 .question-number {
   float: left;
+
+}
+
+.question-number {
+  margin-left: 5em;
+}
+
+.question-number span, 
+.question-number p {
+  padding-left: 2em;
+}
+
+
+.question-number p {
+  margin-top: 0em;
+}
+
+.quiz-question p {
+  margin-top: 8em;
 }
 
 .incorrect-correct {
   float: right;
+
+}
+
+.incorrect-correct p,
+.incorrect-correct span {
+    padding-right: 2em;
+}
+
+.incorrect-correct p {
+  margin-top: 0em;
 }
 
 .quiz-question {
@@ -38,8 +78,13 @@ html {
   margin-top: 7em;
 }
 
+.answer ul {
+  margin-top: 5em;
+}
+
 .answer li {
   display: inline;
+  padding-right: 1em;
 }
 
 .answer {
@@ -49,5 +94,6 @@ html {
 
 .submit-button {
   width: 25%;
-  margin: 0 auto;
+  margin: 3em auto;
+  padding-left: 5em;
 }
