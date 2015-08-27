@@ -9,9 +9,12 @@ html {
   box-sizing: inherit;
   }
 
+.app-body {
+  display: none;
+}
 
-
-  .app-body {
+.app-body,
+.app-start {
     max-width: 55em;
     margin: auto;
     margin-top: 5em;
@@ -97,7 +100,7 @@ html {
    margin: 0 auto;
 }
 
-.submit-button {
+.submit {
   width: 25%;
   margin: 3em auto;
   padding-left: 5em;
