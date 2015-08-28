@@ -9,12 +9,12 @@ html {
   box-sizing: inherit;
   }
 
-.app-body {
+.hide {
   display: none;
 }
 
 .app-body,
-.app-start {
+.app-start{
     max-width: 55em;
     margin: auto;
     margin-top: 5em;
@@ -27,6 +27,7 @@ html {
 
 .app-title h1 {
   text-align: center;
+  margin-top: 4em;
 }
 
 .quiz-info {
@@ -83,7 +84,7 @@ html {
 
 .answer ul {
   margin-top: 5em;
-  margin-left: 5em;
+  margin-left: 8em;
 }
 
 .answer li {
@@ -104,4 +105,27 @@ html {
   width: 25%;
   margin: 3em auto;
   padding-left: 5em;
+}
+
+.start-center {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.start-center p {
+  text-align: center;
+}
+
+.start-center button {
+  margin-top: 3em;
+  margin-left: 40%;
+}
+
+.game-over {
+  display: none;
+}
+
+.game-over h1 {
+  text-align: center;
+  margin-top: 4em;
 }
