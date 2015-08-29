@@ -6,10 +6,17 @@ $(document).ready(function(){
 	$('.submit-button').on('click', function() {
 		correctCount();
 		showQuestion(questionNumber());
-		
-		
-	})
 
+			console.log($('.answer ul input:checked').siblings('span', function(){
+				$(this).val();
+				})
+			);
+		})
+	
+		
+	
+
+ 
 });
 
 var questions = [
@@ -59,7 +66,8 @@ var startQuiz = function () {
 		console.log(question);
 		
 		for (prop in questions[0].answers){
-			$('.answer ul').append("<li><span>" +questions[0].answers[prop]+ "</span><input type='radio' name='answer'></li>");
+			option = questions[0].answers[prop];
+			$('.answer ul').append("<li><span>" +option+ "</span><input type='radio' name='answer'></li>");
 	}
 };
 
@@ -68,7 +76,7 @@ var startQuiz = function () {
 var correctCount = function () {
 	var incorrect = 0;
 	var correct = 0;
-	console.log($('input:checked').siblings().val());
+	
 	/*
 	if (answer === questions[0].correct) {
 		correct++;
