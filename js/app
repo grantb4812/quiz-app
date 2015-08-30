@@ -3,16 +3,10 @@ $(document).ready(function(){
 			startQuiz();
 	})	
 
-	$('.submit-button').on('click',function() {
-		
-		
-		
-		checked = $('input:radio[name=answer]').val();
-		console.log(checked);
-		correctCount(checked);
-
+	$('.submit-button').submit(function() {
+		correctCount();
 		showQuestion(questionNumber());
-		
+
 		return false;
 	})
 	
@@ -55,15 +49,13 @@ var questions = [
 	}
 ];
 
-var question = 0;
+var question;
 
 var startQuiz = function () {
 	
 		$('.app-start').hide();
 		$('.hide').show();
-		showQuestion(0);
-		
-	/*	$('.number').append(questions[0].number);
+		$('.number').append(questions[0].number);
 		$('.quiz-question p').append(questions[0].question);
 		// setting question to be used as index
 		question = questions[0].number - 1;
@@ -71,19 +63,19 @@ var startQuiz = function () {
 		console.log(question);
 		
 		for (prop in questions[0].answers){
-		   var option = questions[0].answers[prop];
-			$('.answer ul').append("<li><span>"+option+"</span><input type='radio' name='answer' value='"+option+"'></li>");
-	}*/
+			option = questions[0].answers[prop];
+			$('.answer ul').append("<li><span>" +option+ "</span><input type='radio' name='answer'></li>");
+	}
 };
 
 
 
-var correctCount = function (answer) {
+var correctCount = function () {
 	var incorrect = 0;
 	var correct = 0;
 	
-
-	if (answer === questions[question].correct) {
+	/*
+	if (answer === questions[0].correct) {
 		correct++;
 		// console.log(correct);
 		$('.correct').replaceWith(correct);
@@ -92,19 +84,17 @@ var correctCount = function (answer) {
 		$('.incorrect').append(incorrect);
 	}
 
-
+	*/
 
 };
 
 var questionNumber = function() {
 	question++;
-	console.log(question);
 	return question;
 };
 
 var showQuestion = function (n) {
 	// need to work on this
-	console.log(n);
 		if (n < questions.length) {
 	
 			$('.number').empty();
@@ -114,9 +104,8 @@ var showQuestion = function (n) {
 			$('.quiz-question p').append(questions[n].question);
 			
 			$('.answer ul').empty();
-			for (prop in questions[n].answers){
-				var option = questions[n].answers[prop];
-				$('.answer ul').append("<li><span>" +option+ "</span><input type='radio' name='answer' value='"+option+"'></li>");
+			for (prop in questions[prop].answers){
+				$('.answer ul').append("<li><span>" +questions[n].answers[prop]+ "</span><input type='radio'></li>");
 			};
 	
 		} else {
