@@ -7,8 +7,7 @@ $(document).ready(function(){
 		
 		
 		
-		checked = $('input:radio[name=answer]').val();
-		console.log(checked);
+		checked = $('input[name=answer]:checked').val();
 		correctCount(checked);
 
 		showQuestion(questionNumber());
@@ -76,20 +75,22 @@ var startQuiz = function () {
 	}*/
 };
 
+var incorrect = 0;
+var correct = 0;
+	
 
 
 var correctCount = function (answer) {
-	var incorrect = 0;
-	var correct = 0;
 	
 
 	if (answer === questions[question].correct) {
 		correct++;
-		// console.log(correct);
-		$('.correct').replaceWith(correct);
+		console.log(correct);
+		$('.correct').replaceWith('<span class="correct">'+correct+'</span>');
 	} else {
 		incorrect++;
-		$('.incorrect').append(incorrect);
+		$('.incorrect').replaceWith('<span class="incorrect">'+incorrect+'</span>');
+		console.log(incorrect);
 	}
 
 
@@ -98,13 +99,11 @@ var correctCount = function (answer) {
 
 var questionNumber = function() {
 	question++;
-	console.log(question);
 	return question;
 };
 
 var showQuestion = function (n) {
 	// need to work on this
-	console.log(n);
 		if (n < questions.length) {
 	
 			$('.number').empty();
